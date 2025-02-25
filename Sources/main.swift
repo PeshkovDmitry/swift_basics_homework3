@@ -15,4 +15,11 @@ var res: [Int] = arr.filter{$0 != nil}.map{$0!}.filter{$0 != 0}.filter{$0 != 4}.
 print(res)
 
 // Задание 3
-
+let createArr = { (size: Int) -> [Int] in 
+    var res: [Int] = [1]
+    for _ in 1..<size {
+        res.append(res.last! * 2)
+    }
+    return res
+}
+print(createArr(7))
