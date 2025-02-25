@@ -7,3 +7,9 @@ for (num, client) in queue.enumerated() {
         print(String(num) + ": " + client + "->" + String(price))
     }
 }
+
+// Задание 2
+
+let arr: [Int?] = [-4, 5, 10, nil, 4, nil, 25, 0, nil, 16, 75, -20, -7, 15, 0, nil]
+var res: [Int] = arr.filter{$0 != nil}.map{$0!}.filter{$0 != 0}.filter{$0 != 4}
+print(res)
